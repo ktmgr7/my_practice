@@ -1,1 +1,18 @@
-untitled
+```{r}
+library(tidyverse)
+read_csv("data/GLB.Ts+dSST.csv")
+```
+
+
+```{r}
+read_csv("F:/R+Pyt/practice-git/my_practice/data/GLB.Ts+dSST.csv", skip=1, na = "***") %>% 
+select(Year, t_diff = 'J-D') %>% 
+ggplot(aes(x=Year, y=t_diff))+
+geom_line()+
+geom_point(fill="white", color="gray", shape=21)+
+geom_smooth(se=FALSE, color='black', size=0.5, span= 0.15) +
+  scale_y_continuous(breaks = seq(1880, 2023, 20), expand=c(0,0))
+scale_y_continuous(limits=c(-0.5, 1.5), expand = c(0,0))
+theme_light()
+```
+
