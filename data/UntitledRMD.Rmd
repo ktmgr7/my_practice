@@ -14,5 +14,6 @@ geom_smooth(se=FALSE, color='black', size=0.5, span= 0.15) +
   scale_y_continuous(breaks = seq(1880, 2023, 20), expand=c(0,0))
 scale_y_continuous(limits=c(-0.5, 1.5), expand = c(0,0))
 theme_light()
+
 ```
 
